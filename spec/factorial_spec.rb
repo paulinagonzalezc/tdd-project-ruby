@@ -4,33 +4,29 @@ describe Solver do
   context 'When testing the Solver class' do
     solver = Solver.new
 
-    it 'the method factorial should return the factorial of given integer' do
-      value = 5
-      result = solver.factorial(value)
-      expect(result).to eq 120
+    it 'the method fizzBizz should retrn "fizz" if its divisible by 3' do
+      value = 9
+      result = solver.fizzBuzz(value)
+      expect(result).to 'fizz'
     end
 
-    it 'the method factorial should return the factorial of given integer' do
-      value = 4
-      result = solver.factorial(value)
-      expect(result).to eq 24
+    it 'the method fizzBizz should retrn "buzz" if its divisible by 5' do
+      value = 25
+      result = solver.fizzBuzz(value)
+      expect(result).to 'buzz'
     end
 
-    it 'the method factorial should return the factorial of given integer' do
-      value = 0
-      result = solver.factorial(value)
-      expect(result).to eq 1
+    it 'the method fizzBizz should retrn "fizzBuzz" if its divisible by 3 and 5' do
+      value = 15
+      result = solver.fizzBuzz(value)
+      expect(result).to 'fizzbuzz'
     end
 
-    it 'the method factorial should return the factorial of given integer' do
-      value = 1
-      result = solver.factorial(value)
-      expect(result).to eq 1
+    it 'the method fizzBizz should retrn 6 if its not divisible by 3 or 5' do
+      value = 6
+      result = solver.fizzBuzz(value)
+      expect(result).to 6
     end
 
-    it 'the method factorial should throw an exception for negative integer' do
-      value = -2
-      expect { solver.factorial(value) }.to raise_error(StandardError)
-    end
   end
 end
