@@ -10,4 +10,15 @@ class Solver
     str.reverse
   end
 
+  def fizz_buzz(n)
+    if (n % 3).zero? && (n % 5).zero?
+      'fizz_buzz'
+    elsif (n % 3).zero?
+      'fizz'
+    elsif (n % 5).zero?
+      'buzz'
+    else
+      n
+    end
+  end
 end
